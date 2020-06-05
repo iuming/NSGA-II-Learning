@@ -389,18 +389,18 @@ int main (int argc, char **argv)
     fflush(fpt5);
     sleep(1);
     /**************************************核心代码**************************************/
-    for (i = 2; i <= ngen; i++) // 初始化生成代码为第一代，其后的操作为第  2  代到设定的迭代次数  ngen
+    for (i = 2; i <= ngen; i++) /* 初始化生成代码为第一代，其后的操作为第  2  代到设定的迭代次数  ngen */
     {
-        selection(parent_pop, child_pop);   // selection 函数  （二元锦标赛选择，SBX交叉）等功能的实现包装在一起
-        mutation_pop(child_pop);            // mutation_pop 函数 对新种群（ child_pop ） 进行变异操作
-        decode_pop(child_pop);              // decode_pop 函数 为对二进制编码的遗传个体进行解码操作
-        evaluate_pop(child_pop);            // evaluate_pop 函数 是对新种群（ child_pop ） 进行多目标函数值的计算
-        merge(parent_pop, child_pop, mixed_pop); // merge 函数  将 父种群  和   子种群   合并成临时种群（mixed_pop）
-        fill_nondominated_sort(mixed_pop, parent_pop); // fill_nondominated_sort 对临时种群（mixed_pop） 非支配排序，拥挤距离判断
+        selection(parent_pop, child_pop);   /* selection 函数  （二元锦标赛选择，SBX交叉）等功能的实现包装在一起 */
+        mutation_pop(child_pop);            /* mutation_pop 函数 对新种群（ child_pop ） 进行变异操作 */
+        decode_pop(child_pop);              /* decode_pop 函数 为对二进制编码的遗传个体进行解码操作 */
+        evaluate_pop(child_pop);            /* evaluate_pop 函数 是对新种群（ child_pop ） 进行多目标函数值的计算 */
+        merge(parent_pop, child_pop, mixed_pop); /* merge 函数  将 父种群  和   子种群   合并成临时种群（mixed_pop） */
+        fill_nondominated_sort(mixed_pop, parent_pop); /* fill_nondominated_sort 对临时种群（mixed_pop） 非支配排序，拥挤距离判断 */
         /* Comment following four lines if information for all
         generations is not desired, it will speed up the execution */
         fprintf(fpt4,"# gen = %d\n",i);
-        report_pop(parent_pop, fpt4);       // report_pop  对  父种群（parent_pop）中的个体的多目标函数值，支配层，拥挤距离，个体编码进行打印
+        report_pop(parent_pop, fpt4);       /* report_pop  对  父种群（parent_pop）中的个体的多目标函数值，支配层，拥挤距离，个体编码进行打印 */
         fflush(fpt4);
         if (choice!=0)    onthefly_display (parent_pop,gp,i);
         printf("\n gen = %d",i);
