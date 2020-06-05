@@ -23,15 +23,15 @@ void merge(population *pop1, population *pop2, population *pop3)
 }
 
 /* Routine to copy an individual 'ind1' into another individual 'ind2' */
-// 具体进行两个个体 内容拷贝的函数
+/* 具体进行两个个体 内容拷贝的函数 */
 void copy_ind (individual *ind1, individual *ind2)
 {
     int i, j;
-    ind2->rank = ind1->rank; // 复制个体的  支配层  排序值
-    ind2->constr_violation = ind1->constr_violation; // 复制个体的  限制条件  的超出值， 大于等于0未超出， 小于0为超出限制
-    ind2->crowd_dist = ind1->crowd_dist;             // 复制个体的  拥挤距离
+    ind2->rank = ind1->rank; /* 复制个体的  支配层  排序值 */
+    ind2->constr_violation = ind1->constr_violation; /* 复制个体的  限制条件  的超出值， 大于等于0未超出， 小于0为超出限制 */
+    ind2->crowd_dist = ind1->crowd_dist;             /* 复制个体的  拥挤距离 */
 
-    // 判断个体的编码， 把个体的具体编码值 复制
+    /* 判断个体的编码， 把个体的具体编码值 复制 */
     if (nreal!=0)
     {
         for (i=0; i<nreal; i++)
@@ -51,13 +51,13 @@ void copy_ind (individual *ind1, individual *ind2)
         }
     }
 
-    // 复制个体的  各个  目标函数的数值
+    /* 复制个体的  各个  目标函数的数值 */
     for (i=0; i<nobj; i++)
     {
         ind2->obj[i] = ind1->obj[i];
     }
 
-    // 复制个体的  各个限制条件的  数值， 所有限制条件的数值之和等于 constr_violation
+    /* 复制个体的  各个限制条件的  数值， 所有限制条件的数值之和等于 constr_violation */
     if (ncon!=0)
     {
         for (i=0; i<ncon; i++)
