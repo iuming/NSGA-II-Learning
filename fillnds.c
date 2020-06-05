@@ -97,7 +97,7 @@ void fill_nondominated_sort (population *mixed_pop, population *new_pop)
                 i+=1;
             }
             while (temp2 != NULL);
-            assign_crowding_distance_indices(new_pop, j, i - 1); // 调用  assign_crowding_distance_indices ， 计算加入个体的拥挤距离
+            assign_crowding_distance_indices(new_pop, j, i - 1); /* 调用  assign_crowding_distance_indices ， 计算加入个体的拥挤距离 */
             rank+=1;
         }
         else /*如果超出总体数量则对该层个体进行选择，并对选择出的个体计算拥挤距离*/
