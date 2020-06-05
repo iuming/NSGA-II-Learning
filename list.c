@@ -8,9 +8,9 @@
 # include "rand.h"
 
 /* Insert an element X into the list at location specified by NODE */
-void insert(list *node, int x) // 申请一块新的内存空间，放在在 list  指针   指向的空间之后
+void insert(list *node, int x) /* 申请一块新的内存空间，放在在 list  指针   指向的空间之后 */
 {
-    // list  结构体中有两个指针，可构成双向链表，数值空间存放   索引序号
+    /* list  结构体中有两个指针，可构成双向链表，数值空间存放   索引序号 */
     list *temp;
     if (node==NULL)
     {
@@ -30,7 +30,7 @@ void insert(list *node, int x) // 申请一块新的内存空间，放在在 lis
 }
 
 /* Delete the node NODE from the list */
-list *del(list *node) // 将  list  指向 的个体空间释放
+list *del(list *node) /* 将  list  指向 的个体空间释放 */
 {
     list *temp;
     if (node==NULL)
@@ -47,4 +47,4 @@ list *del(list *node) // 将  list  指向 的个体空间释放
     free (node);
     return (temp);
 }
-// 以上两个操作在插入，删除操作后都有修改指针操作，保证原有链表 的  上下链接正常
+/* 以上两个操作在插入，删除操作后都有修改指针操作，保证原有链表 的  上下链接正常 */
