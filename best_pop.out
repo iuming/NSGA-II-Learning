@@ -1,0 +1,6 @@
+# This file contains the data of final feasible population (if found)
+# of objectives = 3, # of constraints = 0, # of real_var = 2, # of bits of bin_var = 0, constr_violation, rank, crowding_distance
+-2.999943e+00	-1.451227e+14	0.000000e+00	-2.999943e+00	-1.854076e+00	0.000000e+00	1	1.000000e+14
+-2.999999e+00	-9.871226e+13	0.000000e+00	-2.999999e+00	-2.341422e+00	0.000000e+00	1	6.184628e-01
+-2.999999e+00	-8.964310e+13	0.000000e+00	-2.999999e+00	-1.031717e+00	0.000000e+00	1	9.699066e-02
+-3.000000e+00	-8.120451e+13	0.000000e+00	-3.000000e+00	-1.916813e+00	0.000000e+00	1	1.000000e+14
